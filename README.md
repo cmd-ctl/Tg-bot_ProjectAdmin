@@ -1,21 +1,21 @@
-# 🛡️ Admin Bot — Telegram Project Management Bot
+# Admin Bot — Telegram Project Management Bot
 
 **Admin Bot** is a modular Telegram bot designed for project administrators. It provides a range of powerful tools to manage users, statistics, scheduled commands, and system diagnostics — all through Telegram.
 
 ---
 
-## 📦 Features
+## Features
 
-- 📊 User and referral statistics
-- 💾 Save and execute SQL queries (PostgreSQL + SQLite)
-- 🔁 Schedule recurring bot commands
-- 🧩 Dynamic module hot-reloading
-- ⚙️ Manage bot configuration and module files
-- 🖥️ View server system info (CPU, memory, uptime)
+- User and referral statistics
+- Save and execute SQL queries (PostgreSQL + SQLite)
+- Schedule recurring bot commands
+- Dynamic module hot-reloading
+- Manage bot configuration and module files
+- View server system info (CPU, memory, uptime)
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 
 ```
 admin-bot.js               # Main bot launcher
@@ -78,37 +78,37 @@ node admin-bot.js
 * `/addmodule` — Upload or replace a `.js` module
 * `/listmodules` — Show currently loaded modules
 
-### 📊 Statistics
+### Statistics
 
 * `/activity` — Show DAU, WAU, MAU
 * `/statfind week|month N` — Top active users
 * `/channels` — Users by channel sources
 * `/channeldata <source>` — Users by referral source
 
-### 💾 SQL Queries
+### SQL Queries
 
 * `/query <SQL>` — Execute custom SQL
 * `/querysave <name> <SQL>` — Save SQL query
 * `/querylist` — List saved queries
 * `/queryrun` — Select and run a saved query
 
-### 🔁 Scheduler
+### Scheduler
 
 * `/schedule <name> <minutes> <chatId> <command>` — Schedule command to run periodically
 * `/unschedule` — Show buttons to remove scheduled task
 * `/schedulelist` — Show all active scheduled tasks
 
-### 👤 User Management
+### User Management
 
 * `/block <userId> true|false` — Block or unblock a user
 
-### 🖥️ System
+### System
 
 * `/sysinfo` — Server uptime, memory, CPU load
 
 ---
 
-## 📌 Dependencies
+## Dependencies
 
 * `node-telegram-bot-api`
 * `dotenv`
@@ -127,7 +127,7 @@ npm install
 
 ---
 
-## 🧩 Creating a Module
+## Creating a Module
 
 Each module is a JS file in the `modules/` folder. It must export a function:
 
@@ -143,13 +143,13 @@ Modules are auto-loaded and hot-reloaded on change.
 
 ---
 
-## 🔐 Access Control
+## Access Control
 
 Only users listed in `adminIds` can interact with the bot. All admin commands check the user ID before execution.
 
 ---
 
-## 💡 Tips
+## Tips
 
 * Use SQLite for fast local query storage.
 * Use PostgreSQL for primary user/statistics data.
