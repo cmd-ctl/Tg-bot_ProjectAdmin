@@ -68,9 +68,9 @@ node admin-bot.js
 
 ---
 
-## 💬 Bot Commands
+## Bot Commands
 
-### ⚙️ Settings & Modules
+### Settings & Modules
 
 * `/getsettings` — Download current `config.json`
 * `/newsettings` — Upload new `config.json`
